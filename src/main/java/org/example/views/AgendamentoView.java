@@ -19,14 +19,14 @@ public class AgendamentoView {
         System.out.println("Digite o tipo de sala (1 - Sala de jogos, 2 - Sala de reunião, 3 - Auditório):");
         int tipoSala = scanner.nextInt();
 
-        System.out.println("Digite o ID da sala:");
-        String idSala = scanner.next();
-
         System.out.println("Digite o nome da sala:");
         String nomeSala = scanner.next();
 
-        System.out.println("Digite o ID do funcionário:");
-        String idFuncionario = scanner.next();
+        System.out.println("Digite a data do agendamento:");
+        String data = scanner.next();
+
+        System.out.println("Digite o horário do agendamento:");
+        String horario = scanner.next();
 
         System.out.println("Digite o nome do funcionário:");
         String nomeFuncionario = scanner.next();
@@ -34,7 +34,7 @@ public class AgendamentoView {
         System.out.println("Digite o cargo do funcionário:");
         String cargoFuncionario = scanner.next();
 
-        controller.realizarAgendamento(SalaType.values()[tipoSala - 1], idSala, nomeSala, idFuncionario, nomeFuncionario, cargoFuncionario);
+        controller.realizarAgendamento(SalaType.values()[tipoSala - 1], nomeSala, data, horario, nomeFuncionario, cargoFuncionario);
     }
 
     public void exibirMensagemSucesso() {

@@ -4,8 +4,7 @@ public class SalaDeJogos implements Sala {
     private String id;
     private String nome;
 
-    public SalaDeJogos(String id, String nome) {
-        this.id = id;
+    public SalaDeJogos(String nome) {
         this.nome = nome;
     }
 

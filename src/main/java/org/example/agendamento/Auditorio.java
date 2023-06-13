@@ -4,8 +4,7 @@ public class Auditorio implements Sala {
     private String id;
     private String nome;
 
-    public Auditorio(String id, String nome) {
-        this.id = id;
+    public Auditorio(String nome) {
         this.nome = nome;
     }
 
