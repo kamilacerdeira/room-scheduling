@@ -13,9 +13,8 @@ public class AgendamentoController {
         Funcionario funcionario = new Funcionario(nomeFuncionario, cargoFuncionario);
         Agenda agenda = new Agenda(funcionario.getNome(), sala.getNome(), data, horario);
 
-        // Lógica de agendamento aqui
-
         exibirMensagemSucesso();
+        exibirResumoAgendamento(agenda);
     }
 
     private Sala criarSala(SalaType tipoSala, String nomeSala) {
@@ -29,6 +28,15 @@ public class AgendamentoController {
             default:
                 throw new IllegalArgumentException("Tipo de sala inválido.");
         }
+    }
+
+    private void exibirResumoAgendamento(Agenda agenda) {
+        System.out.println("Resumo do Agendamento:");
+        System.out.println("Funcionário responsável: " + agenda.getNomeFuncionarioResponsavel());
+        System.out.println("Sala agendada: " + agenda.getNomeSalaAgendada());
+        System.out.println("Data: " + agenda.getData());
+        System.out.println("Horário: " + agenda.getHorario());
+        System.out.println();
     }
 
     private void exibirMensagemSucesso() {
